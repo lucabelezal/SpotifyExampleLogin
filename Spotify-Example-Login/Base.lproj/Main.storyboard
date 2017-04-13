@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Chz-m5-qTq">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Chz-m5-qTq">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -13,7 +13,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Spotify_Example_Login" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SpotifyExampleLogin" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -53,30 +53,40 @@
                                     <constraint firstAttribute="height" constant="55" id="um4-xr-BKE"/>
                                 </constraints>
                             </imageView>
-                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="hUm-cL-nZz">
-                                <rect key="frame" x="168" y="492" width="39" height="31"/>
-                                <connections>
-                                    <action selector="changePage:" destination="BYZ-38-t0r" eventType="valueChanged" id="hJo-GM-3Bc"/>
-                                </connections>
-                            </pageControl>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lxD-vb-uyl">
-                                <rect key="frame" x="16" y="404" width="343" height="63"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A1Q-cL-beh">
+                                <rect key="frame" x="0.0" y="416" width="375" height="110"/>
+                                <subviews>
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lxD-vb-uyl">
+                                        <rect key="frame" x="16" y="8" width="343" height="86"/>
+                                    </scrollView>
+                                    <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="hUm-cL-nZz">
+                                        <rect key="frame" x="168" y="94" width="39" height="16"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="16" id="WV5-RW-0Ar"/>
+                                        </constraints>
+                                        <connections>
+                                            <action selector="changePage:" destination="BYZ-38-t0r" eventType="valueChanged" id="hJo-GM-3Bc"/>
+                                        </connections>
+                                    </pageControl>
+                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="343" id="JpX-UN-6t8"/>
-                                    <constraint firstAttribute="height" constant="63" id="qaO-s1-klq"/>
+                                    <constraint firstItem="lxD-vb-uyl" firstAttribute="centerX" secondItem="hUm-cL-nZz" secondAttribute="centerX" id="7CL-5o-sAA"/>
+                                    <constraint firstAttribute="height" constant="110" id="Bnw-U8-gQ7"/>
+                                    <constraint firstItem="hUm-cL-nZz" firstAttribute="top" secondItem="lxD-vb-uyl" secondAttribute="bottom" id="J1f-0u-q1l"/>
+                                    <constraint firstItem="lxD-vb-uyl" firstAttribute="centerX" secondItem="A1Q-cL-beh" secondAttribute="centerX" id="OIc-f8-VFo"/>
+                                    <constraint firstItem="hUm-cL-nZz" firstAttribute="top" secondItem="lxD-vb-uyl" secondAttribute="bottom" id="c0W-gb-Oht"/>
+                                    <constraint firstItem="lxD-vb-uyl" firstAttribute="top" secondItem="A1Q-cL-beh" secondAttribute="topMargin" id="cbr-Mb-AJx"/>
+                                    <constraint firstAttribute="bottom" secondItem="hUm-cL-nZz" secondAttribute="bottom" id="l1g-eC-jbd"/>
+                                    <constraint firstItem="lxD-vb-uyl" firstAttribute="leading" secondItem="A1Q-cL-beh" secondAttribute="leading" constant="16" id="woe-68-FVC"/>
                                 </constraints>
-                            </scrollView>
+                            </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.0" green="0.20392156859999999" blue="0.38823529410000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.17654922604560852" green="0.16796541213989258" blue="0.20107153058052063" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="lxD-vb-uyl" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="0Yx-9f-Uap"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="1gr-64-Zv2" secondAttribute="bottom" id="5O8-oe-9kT"/>
                             <constraint firstAttribute="trailing" secondItem="1gr-64-Zv2" secondAttribute="trailing" id="FCN-4Y-Bih"/>
-                            <constraint firstItem="lxD-vb-uyl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FH5-cQ-5Gu"/>
                             <constraint firstItem="DEz-Qk-Xj6" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="IO9-uO-im5"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="hUm-cL-nZz" secondAttribute="trailing" constant="152" id="J1l-zX-DQ1"/>
                             <constraint firstAttribute="trailing" secondItem="1gr-64-Zv2" secondAttribute="trailing" id="LcP-qi-Un9"/>
-                            <constraint firstItem="lxD-vb-uyl" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="404" id="MEb-xe-bky"/>
                             <constraint firstItem="DEz-Qk-Xj6" firstAttribute="width" secondItem="1gr-64-Zv2" secondAttribute="width" id="N7W-Uc-zyv"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="DEz-Qk-Xj6" secondAttribute="bottom" id="OxR-s2-oCy"/>
                             <constraint firstItem="DEz-Qk-Xj6" firstAttribute="height" secondItem="1gr-64-Zv2" secondAttribute="height" id="Oys-UT-0jT"/>
@@ -84,13 +94,12 @@
                             <constraint firstItem="DEz-Qk-Xj6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="XMj-oq-Eug"/>
                             <constraint firstItem="5O8-O6-J1f" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="40" id="ZCA-C5-p3C"/>
                             <constraint firstItem="5O8-O6-J1f" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bwu-Wu-HJ0"/>
-                            <constraint firstItem="hUm-cL-nZz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="152" id="dh8-3x-Lim"/>
-                            <constraint firstItem="DEz-Qk-Xj6" firstAttribute="top" secondItem="hUm-cL-nZz" secondAttribute="bottom" constant="35" id="f60-8T-QgO"/>
                             <constraint firstItem="5O8-O6-J1f" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="giB-V4-ESU"/>
+                            <constraint firstItem="A1Q-cL-beh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="kk1-ed-42c"/>
+                            <constraint firstAttribute="trailing" secondItem="A1Q-cL-beh" secondAttribute="trailing" id="lJg-rv-gs8"/>
                             <constraint firstItem="1gr-64-Zv2" firstAttribute="leading" secondItem="DEz-Qk-Xj6" secondAttribute="trailing" constant="-1" id="nWn-ic-oQK"/>
+                            <constraint firstItem="DEz-Qk-Xj6" firstAttribute="top" secondItem="A1Q-cL-beh" secondAttribute="bottom" constant="32" id="ruZ-At-K6m"/>
                             <constraint firstItem="DEz-Qk-Xj6" firstAttribute="baseline" secondItem="1gr-64-Zv2" secondAttribute="baseline" id="v1B-iN-6gW"/>
-                            <constraint firstItem="hUm-cL-nZz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="x0m-gm-p3l"/>
-                            <constraint firstItem="hUm-cL-nZz" firstAttribute="top" secondItem="lxD-vb-uyl" secondAttribute="bottom" constant="25" id="x89-Qq-2Su"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ZJC-Au-VBe">
@@ -108,7 +117,7 @@
         <!--Entrar-->
         <scene sceneID="eCU-wi-jdV">
             <objects>
-                <viewController title="Entrar" id="nTY-lj-9Ru" customClass="GetInViewController" customModule="Spotify_Example_Login" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Entrar" id="nTY-lj-9Ru" customClass="GetInViewController" customModule="SpotifyExampleLogin" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="0w8-eb-cBu"/>
                         <viewControllerLayoutGuide type="bottom" id="fOC-zR-rVQ"/>
@@ -261,7 +270,7 @@
         <!--Inscrever-se-->
         <scene sceneID="Fk2-bE-k3U">
             <objects>
-                <viewController title="Inscrever-se" id="x4E-3O-bvV" customClass="SignUpViewController" customModule="Spotify_Example_Login" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Inscrever-se" id="x4E-3O-bvV" customClass="SignUpViewController" customModule="SpotifyExampleLogin" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="JNV-7F-QPD"/>
                         <viewControllerLayoutGuide type="bottom" id="3OW-rw-gFY"/>

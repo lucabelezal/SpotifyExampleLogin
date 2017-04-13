@@ -7,7 +7,7 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     
     //var counter = -1
     //var timer = Timer()
-    
+    //
     
     
     var isTimerEnable = false

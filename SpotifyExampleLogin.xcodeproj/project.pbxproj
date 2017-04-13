@@ -17,7 +17,6 @@
 		6E6A8AD41E6F4D10000DEE89 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6A8AD31E6F4D10000DEE89 /* SignUpViewController.swift */; };
 		6E6A8ADC1E6F4D5B000DEE89 /* BackgroundVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6A8ADB1E6F4D5B000DEE89 /* BackgroundVideo.swift */; };
 		6E6A8ADE1E6F4D62000DEE89 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6A8ADD1E6F4D62000DEE89 /* ViewController.swift */; };
-		6E6A8AE01E6F4D77000DEE89 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6E6A8ADF1E6F4D77000DEE89 /* Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -115,7 +114,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0820;
-				LastUpgradeCheck = 0820;
+				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = "Lucas Nascimento";
 				TargetAttributes = {
 					6E6A8AB41E6F4B74000DEE89 = {
@@ -150,7 +149,6 @@
 			files = (
 				6E6A8AC31E6F4B74000DEE89 /* LaunchScreen.storyboard in Resources */,
 				6E6A8AC01E6F4B74000DEE89 /* Assets.xcassets in Resources */,
-				6E6A8AE01E6F4D77000DEE89 /* Info.plist in Resources */,
 				6E6A8ABE1E6F4B74000DEE89 /* Main.storyboard in Resources */,
 				6E6A8ACB1E6F4C80000DEE89 /* LoginTextView.xib in Resources */,
 				6E6A8ACE1E6F4CF4000DEE89 /* moments.mp4 in Resources */,
